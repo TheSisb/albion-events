@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
+import moment from 'moment';
+import {db} from './db';
 import './App.css';
+
+// https://momentjs.com/docs/#/displaying/calendar-time/
+function fromNow(time) {
+  const localTime = moment.utc(time).local();
+  return `${localTime.calendar()} (${localTime.fromNow()})`;
+}
+
+const EventItem = ({title, details, dayOfSeason, date}) => (
+  <section className="event-item">
+    <h3>{title}</h3>
+    <p>{details}</p>
+    <div>
+      When: {fromNow(date)}
+      <br />
+      Day of Season: {dayOfSeason}
+    </div>
+  </section>
+)
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {db.map((event, i) => <EventItem key={i} {...event} />)}
     </div>
   );
 }
