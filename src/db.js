@@ -1,19 +1,7 @@
 // Times are in UTC
-// Source: 
+// Source:
 
 const db = [
-    {
-        title: 'Second Invasion US',
-        details: 'Guardians Appear, Territories claimable',
-        dayOfSeason: 30,
-        date: new Date('5/19/2019 1:00 AM UTC')
-    },
-    {
-        title: 'Second GvGs',
-        details: 'GvGs Start',
-        dayOfSeason: 31,
-        date: new Date('5/20/2019 11:00 AM UTC')
-    },
     {
         title: 'Second GvGs End',
         details: 'End of GvGs, Scoring Ends',

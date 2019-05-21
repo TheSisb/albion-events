@@ -1,12 +1,33 @@
-.event-item {
+.converter,
+.events  {
   padding: 15px;
-  border-bottom: 1px solid #000;
 }
 
-h3 {
-  margin: 0 0 8px 0;
+label {
+  font-weight: 600;
+  margin-right: 4px;
 }
 
-p {
-  margin: 4px 0;
+input {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.event-item {
+  margin-bottom: 20px;
+}
+
+.event-title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.event-details {
+  font-size: 14px;
+  font-style: italic;
+  margin: 8px 0;
+}
+
+.event-time {
+  font-family: monospace;
 }
